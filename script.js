@@ -1,16 +1,25 @@
-let nameArray = ['Max ', 'Bella ', 'Cooper ', 'Milo ', 'Buddy ']
+let nameArray = [
+  { name: 'Max ', age: 6, species: ' dog ' },
+  { name: 'Bella ', age: 2, species: ' cat ' },
+  { name: 'Cooper ', age: 3, species: 'rabbit' },
+]
 
 function nameadding() {
-  //lets user input in name of dog
-  let name = prompt('what is the name of the new dog?')
-  //add a new name to array of names
-  nameArray.push(name)
+  let pet = {
+    //lets user input in name of pet
+    name: prompt('what is the name of the new pet?'),
+    //lets user input in age of pet
+    age: prompt('what is the age of the new pet?'),
+    //lets user input in speicies of pet
+    species: prompt('what is the species of the new pet?'),
+  }
+  //add a new pet to array of pets
+  nameArray.push(pet)
 }
-
-function removename()
 
 function names() {
   // shows names of all pets
-  alert(nameArray)
+  for (let pet of nameArray) {
+    alert(pet.name)
+  }
 }
-
