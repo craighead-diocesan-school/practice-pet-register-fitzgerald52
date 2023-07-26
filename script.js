@@ -39,13 +39,22 @@ function speicies() {
 }
 
 function search() {
-  let searchtraget = prompt('what is the name of the pet')
+  //decides what pet you want to find
+  let searchtarget = prompt('what is the name of the pet')
   let searchresult = false
-  // let petfind = prompt('what is the name of the pet you want to find?')
+  // it runs this code for for every pet name in the array
   for (let pet of nameArray) {
-    if (pet.name == searchtraget) {
+    // if there is a pet name in the array that matches what the user inputs it will say the search result is true
+    if (pet.name == searchtarget) {
       searchresult = true
     }
   }
   alert(searchresult)
+}
+
+function Removepet() {
+  // let remove = prompt(' what is the name of the pet you want to remove ?')
+  // nameArray.splice(remove)
+  let index = 0
+  nameArray.splice(index, 1)
 }
