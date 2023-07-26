@@ -1,7 +1,7 @@
 let nameArray = [
-  { name: 'Max ', age: 6, species: ' dog ' },
-  { name: 'Bella ', age: 2, species: ' cat ' },
-  { name: 'Cooper ', age: 3, species: 'rabbit' },
+  { name: 'Max', age: 6, species: ' dog ' },
+  { name: 'Bella', age: 2, species: ' cat ' },
+  { name: 'Cooper', age: 3, species: 'rabbit' },
 ]
 
 function nameadding() {
@@ -36,4 +36,16 @@ function speicies() {
   for (let pet of nameArray) {
     alert(pet.species)
   }
+}
+
+function search() {
+  let searchtraget = prompt('what is the name of the pet')
+  let searchresult = false
+  // let petfind = prompt('what is the name of the pet you want to find?')
+  for (let pet of nameArray) {
+    if (pet.name == searchtraget) {
+      searchresult = true
+    }
+  }
+  alert(searchresult)
 }
