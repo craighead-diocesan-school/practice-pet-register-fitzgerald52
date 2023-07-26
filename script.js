@@ -20,6 +20,6 @@ function nameadding() {
 function names() {
   // shows names of all pets
   for (let pet of nameArray) {
-    alert(pet.name)
+    alert(pet.name.age.species)
   }
 }
