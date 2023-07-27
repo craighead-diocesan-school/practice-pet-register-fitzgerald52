@@ -53,8 +53,18 @@ function search() {
 }
 
 function Removepet() {
-  // let remove = prompt(' what is the name of the pet you want to remove ?')
-  // nameArray.splice(remove)
+  let nameremove = prompt('what is the name of the pet you want to remove ?')
   let index = 0
-  nameArray.splice(index, 1)
+  let searchtarget = nameremove
+  let searchresult = false
+
+  for (let pet of nameArray) {
+    if (pet.name != nameremove && searchtarget != true) {
+      index = index + 1
+      if (pet.name == searchtarget) {
+        searchresult = true
+      }
+    }
+  }
+  alert(index)
 }
