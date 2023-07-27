@@ -57,12 +57,13 @@ function Removepet() {
   let index = 0
   let searchtarget = false
   for (let pet of nameArray) {
-    alert(`We're currently at index ${index} and it's ${pet.name}. Search target is ${searchtarget}.`)
+    // alert(`We're currently at index ${index} and it's ${pet.name}. Search target is ${searchtarget}.`)
     if (pet.name != nameremove && searchtarget != true) {
       index = index + 1
     } else if (pet.name == nameremove) {
-      searchresult = true
+      searchtarget = true
     }
   }
   alert(index)
+  nameArray.splice(index, index)
 }
