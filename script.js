@@ -55,15 +55,13 @@ function search() {
 function Removepet() {
   let nameremove = prompt('what is the name of the pet you want to remove ?')
   let index = 0
-  let searchtarget = nameremove
-  let searchresult = false
-
+  let searchtarget = false
   for (let pet of nameArray) {
+    alert(`We're currently at index ${index} and it's ${pet.name}. Search traget is ${searchtarget}.`)
     if (pet.name != nameremove && searchtarget != true) {
       index = index + 1
-      if (pet.name == searchtarget) {
-        searchresult = true
-      }
+    } else if (pet.name == searchtarget) {
+      searchresult = true
     }
   }
   alert(index)
