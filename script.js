@@ -65,5 +65,5 @@ function Removepet() {
     }
   }
   alert(index)
-  nameArray.splice(index, index)
+  nameArray.splice(index, 1)
 }
