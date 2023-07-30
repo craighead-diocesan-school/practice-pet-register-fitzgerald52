@@ -49,6 +49,7 @@ function search() {
       searchresult = true
     }
   }
+  //alerts the search result
   alert(searchresult)
 }
 
