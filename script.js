@@ -1,4 +1,4 @@
-let nameArray = [
+let petArray = [
   { name: 'Max', age: 6, species: ' dog ' },
   { name: 'Bella', age: 2, species: ' cat ' },
   { name: 'Cooper', age: 3, species: 'rabbit' },
@@ -14,26 +14,26 @@ function nameadding() {
     species: prompt('what is the species of the new pet?'),
   }
   //add a new pet to array of pets
-  nameArray.push(pet)
+  petArray.push(pet)
 }
 
 function names() {
   // shows names of all pets
-  for (let pet of nameArray) {
+  for (let pet of petArray) {
     alert(pet.name)
   }
 }
 
 function ages() {
   // shows ages of all pets
-  for (let pet of nameArray) {
+  for (let pet of petArray) {
     alert(pet.age)
   }
 }
 
 function speicies() {
   // shows names of all pets
-  for (let pet of nameArray) {
+  for (let pet of petArray) {
     alert(pet.species)
   }
 }
@@ -43,7 +43,7 @@ function search() {
   let searchtarget = prompt('what is the name of the pet')
   let searchresult = false
   // it runs this code for for every pet name in the array
-  for (let pet of nameArray) {
+  for (let pet of petArray) {
     // if there is a pet name in the array that matches what the user inputs it will say the search result is true
     if (pet.name == searchtarget) {
       searchresult = true
@@ -57,7 +57,7 @@ function Removepet() {
   let nameremove = prompt('what is the name of the pet you want to remove ?')
   let index = 0
   let searchresult = false
-  for (let pet of nameArray) {
+  for (let pet of petArray) {
     // alert(`We're currently at index ${index} and it's ${pet.name}. Search target is ${searchtarget}.`)
     if (pet.name != nameremove && searchresult != true) {
       index = index + 1
@@ -69,6 +69,6 @@ function Removepet() {
     alert('pet not found')
   } else {
     alert(index)
-    nameArray.splice(index, 1)
+    petArray.splice(index, 1)
   }
 }
