@@ -56,7 +56,9 @@ function search() {
 function Removepet() {
   let nameremove = prompt('what is the name of the pet you want to remove ?')
   let index = 0
+  const amountremoved = 1
   let searchresult = false
+
   for (let pet of petArray) {
     // alert(`We're currently at index ${index} and it's ${pet.name}. Search target is ${searchtarget}.`)
     if (pet.name != nameremove && searchresult != true) {
@@ -69,6 +71,6 @@ function Removepet() {
     alert('pet not found')
   } else {
     alert(index)
-    petArray.splice(index, 1)
+    petArray.splice(index, amountremoved)
   }
 }
