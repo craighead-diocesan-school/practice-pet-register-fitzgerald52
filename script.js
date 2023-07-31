@@ -13,8 +13,12 @@ function nameadding() {
     //lets user input in speicies of pet
     species: prompt('what is the species of the new pet?'),
   }
-  //add a new pet to array of pets
-  petArray.push(pet)
+  if (name != '  ' && typeof age == 'number' && species != ' ') {
+    //add a new pet to array of pets
+    petArray.push(pet)
+  } else {
+    alert('not valid')
+  }
 }
 
 function names() {
