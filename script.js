@@ -5,15 +5,22 @@ let petArray = [
 ]
 
 function nameadding() {
+  let inputname = prompt('what is the name of the new pet?')
+  let inputage = prompt('what is the age of the new pet?')
+  inputage = Number(inputage)
+  let inputspecies = prompt('what is the species of the new pet?')
+
   let pet = {
     //lets user input in name of pet
-    name: prompt('what is the name of the new pet?'),
+    name: inputname,
     //lets user input in age of pet
-    age: prompt('what is the age of the new pet?'),
+    age: inputage,
     //lets user input in speicies of pet
-    species: prompt('what is the species of the new pet?'),
+    species: inputspecies,
   }
-  if (name != '  ' && typeof age == 'number' && species != ' ') {
+
+  //only adds pet to array if all information is valid
+  if (inputname != '' && typeof inputage == 'number' && inputage != '' && inputspecies != '') {
     //add a new pet to array of pets
     petArray.push(pet)
   } else {
