@@ -20,7 +20,7 @@ function nameadding() {
   }
 
   //only adds pet to array if all information is valid
-  if (inputname != '' && typeof inputage == 'number' && inputage != '' && inputspecies != '') {
+  if (inputname.match(/[a-zA-Z0-9]+/) && inputage.match(/^(0?[1-9]|[1-9][0-9])$/) && inputspecies.match(/^[a-zA-Z]+$/)) {
     //add a new pet to array of pets
     petArray.push(pet)
   } else {
