@@ -51,8 +51,9 @@ function search() {
   //decides what pet you want to find
   let searchtarget = prompt('what is the name of the pet')
   let searchresult = false
-  // it runs this code for for every pet name in the array
+  //only searches for pet if all information is valid
   if (searchtarget.match(/[a-zA-Z0-9]+/)) {
+    // it runs this code for for every pet name in the array
     for (let pet of petArray) {
       // if there is a pet name in the array that matches what the user inputs it will say the search result is true
       if (pet.name == searchtarget) {
@@ -72,6 +73,7 @@ function Removepet() {
   let index = 0
   const amountremoved = 1
   let searchresult = false
+  //only removes pet if all information is valid
   if (nameremove.match(/[a-zA-Z0-9]+/)) {
     for (let pet of petArray) {
       //sorts through each pet in the array one at a time and adds one to the index if the pet it is looking for is not the one it found and continues to do this untill it has found it
