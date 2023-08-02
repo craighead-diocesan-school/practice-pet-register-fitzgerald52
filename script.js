@@ -52,14 +52,18 @@ function search() {
   let searchtarget = prompt('what is the name of the pet')
   let searchresult = false
   // it runs this code for for every pet name in the array
-  for (let pet of petArray) {
-    // if there is a pet name in the array that matches what the user inputs it will say the search result is true
-    if (pet.name == searchtarget) {
-      searchresult = true
+  if (searchtarget.match(/[a-zA-Z0-9]+/)) {
+    for (let pet of petArray) {
+      // if there is a pet name in the array that matches what the user inputs it will say the search result is true
+      if (pet.name == searchtarget) {
+        searchresult = true
+      }
     }
+    //alerts the search result
+    alert(searchresult)
+  } else {
+    alert('not valid')
   }
-  //alerts the search result
-  alert(searchresult)
 }
 
 function Removepet() {
@@ -68,22 +72,24 @@ function Removepet() {
   let index = 0
   const amountremoved = 1
   let searchresult = false
-
-  for (let pet of petArray) {
-    // alert(`We're currently at index ${index} and it's ${pet.name}. Search target is ${searchtarget}.`)
-    //sorts through each pet in the array one at a time and adds one to the index if the pet it is looking for is not the one it found and continues to do this untill it has found it
-    if (pet.name != nameremove && searchresult != true) {
-      index = index + 1
-    } else if (pet.name == nameremove) {
-      searchresult = true
+  if (nameremove.match(/[a-zA-Z0-9]+/)) {
+    for (let pet of petArray) {
+      //sorts through each pet in the array one at a time and adds one to the index if the pet it is looking for is not the one it found and continues to do this untill it has found it
+      if (pet.name != nameremove && searchresult != true) {
+        index = index + 1
+      } else if (pet.name == nameremove) {
+        searchresult = true
+      }
     }
-  }
-  if (searchresult == false) {
-    //if the pet they want to remove is not in the array it alerts pet not found
-    alert('pet not found')
+    if (searchresult == false) {
+      //if the pet they want to remove is not in the array it alerts pet not found
+      alert('pet not found')
+    } else {
+      //deletes pet from array by using the index number it relates to
+      alert(index)
+      petArray.splice(index, amountremoved)
+    }
   } else {
-    //deletes pet from array by using the index number it relates to
-    alert(index)
-    petArray.splice(index, amountremoved)
+    alert('not valid')
   }
 }
