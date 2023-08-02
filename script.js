@@ -7,21 +7,19 @@ let petArray = [
 function nameadding() {
   let inputname = prompt('what is the name of the new pet?')
   let inputage = prompt('what is the age of the new pet?')
-  inputage = Number(inputage)
   let inputspecies = prompt('what is the species of the new pet?')
-
-  let pet = {
-    //lets user input in name of pet
-    name: inputname,
-    //lets user input in age of pet
-    age: inputage,
-    //lets user input in speicies of pet
-    species: inputspecies,
-  }
 
   //only adds pet to array if all information is valid
   if (inputname.match(/[a-zA-Z0-9]+/) && inputage.match(/^(0?[1-9]|[1-9][0-9])$/) && inputspecies.match(/^[a-zA-Z]+$/)) {
     //add a new pet to array of pets
+    let pet = {
+      //lets user input in name of pet
+      name: inputname,
+      //lets user input in age of pet
+      age: inputage,
+      //lets user input in speicies of pet
+      species: inputspecies,
+    }
     petArray.push(pet)
   } else {
     alert('not valid')
