@@ -49,14 +49,14 @@ function speicies() {
 
 function search() {
   //decides what pet you want to find
-  let searchtarget = prompt('what is the name of the pet')
+  let petwanted = prompt('what is the name of the pet')
   let searchresult = false
   //only searches for pet if all information is valid
-  if (searchtarget.match(/[a-zA-Z0-9]+/)) {
+  if (petwanted.match(/[a-zA-Z0-9]+/)) {
     // it runs this code for for every pet name in the array
     for (let pet of petArray) {
       // if there is a pet name in the array that matches what the user inputs it will say the search result is true
-      if (pet.name == searchtarget) {
+      if (pet.name == petwanted) {
         searchresult = true
       }
     }
